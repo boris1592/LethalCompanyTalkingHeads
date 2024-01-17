@@ -10,8 +10,6 @@ This mod requires BeepInEx to be installed in order to work. After installing Be
 
 ## Configuration
 
-There are 2 settings in the config file.
-
 | Setting Name | Description | Default |
 | ------------ | ----------- | ------------- |
 | `ScaleSpeed` | This setting controls the speed of change of the scale factor. The lower this value is the slower the scaling will be but it will introduce some delay. | 20 |
