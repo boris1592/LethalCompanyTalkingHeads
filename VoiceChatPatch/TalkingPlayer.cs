@@ -7,7 +7,7 @@ using TalkingHeads.Util;
 
 namespace TalkingHeads.VoiceChatPatch
 {
-    internal class TalkingPlayer
+    public class TalkingPlayer
     {
         public readonly PlayerControllerB Player;
 

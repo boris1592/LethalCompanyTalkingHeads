@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace TalkingHeads.Util
 {
-    internal static class UtilExtensions
+    public static class UtilExtensions
     {
         public static float MoveTowards(this float source, float target, float delta)
         {

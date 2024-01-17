@@ -6,7 +6,7 @@ using UnityEngine;
 namespace TalkingHeads.VoiceChatPatch
 {
     [HarmonyPatch(typeof(StartOfRound))]
-    internal class VoicePatchPatch
+    public class VoicePatchPatch
     {
         private readonly static List<TalkingPlayer> _talkingPlayers = new();
         private static DissonanceComms _voiceChatModule = null;
