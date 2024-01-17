@@ -2,11 +2,11 @@
 
 ## Description
 
-This is a client side mod that scales player heads when they're talking. The louder the player is talking the larger his head will become.
+This is a client side mod that scales player heads when they're talking. The louder the player is talking the larger their head will become.
 
 ## Installation
 
-This mod requires BeepInEx to be installed in order to work. After installing BeepInEx put the mod dll into the `BeepInEx/plugins` folder inside the game directory.
+This mod requires BeepInEx to be installed in order to work. After installing BeepInEx put the mod `.dll` file into the `BeepInEx/plugins` folder inside the game directory.
 
 ## Configuration
 
