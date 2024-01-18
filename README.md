@@ -4,7 +4,7 @@ This is a client side mod that scales player heads when they're talking. The lou
 
 # Installation
 
-This mod requires BeepInEx to be installed in order to work. After installing BeepInEx put the mod `.dll` file into the `BeepInEx/plugins` folder inside the game directory.
+This mod requires BepInEx to be installed in order to work. After installing BepInEx put the mod `.dll` file into the `BepInEx/plugins` folder inside the game directory.
 
 # Configuration
 
