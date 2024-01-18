@@ -1,0 +1,9 @@
+{
+    "name": "TalkingHeads",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/boris1592/LethalCompanyTalkingHeads",
+    "description": "A client side mod that scales player heads when they're talking",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
