@@ -29,11 +29,6 @@ namespace TalkingHeads.VoiceChatPatch
             _targetTransform.localScale = (1 + _currentScale) * Vector3.one;
         }
 
-        public void ResetScale()
-        {
-            _targetTransform.localScale = Vector3.one;
-        }
-
         public static TalkingPlayer CreateVoicePlayer(VoicePlayerState state)
         {
             if (state.Playback is not VoicePlayback) return null;
