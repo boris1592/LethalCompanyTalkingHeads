@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Dissonance;
 using HarmonyLib;
 using UnityEngine;
@@ -28,6 +29,7 @@ namespace TalkingHeads.VoiceChatPatch
             _voiceChatModule.OnPlayerStartedSpeaking -= OnPlayerStartedSpeaking;
             _voiceChatModule.OnPlayerStoppedSpeaking -= OnPlayerStoppedSpeaking;
             _voiceChatModule = null;
+            _talkingPlayers.Clear();
         }
 
         private static void OnPlayerStartedSpeaking(VoicePlayerState state)
@@ -46,7 +48,6 @@ namespace TalkingHeads.VoiceChatPatch
             if (player is null) return;
 
             _talkingPlayers.RemoveAll(p => p.Player == player.Player);
-            player.ResetScale();
         }
 
         // LateUpdate here because animations override the scale in Update
@@ -54,8 +55,21 @@ namespace TalkingHeads.VoiceChatPatch
         [HarmonyPostfix]
         private static void LateUpdate()
         {
-            foreach (var player in _talkingPlayers)
-                player.UpdateScale(Time.deltaTime);
+            var toRemove = new List<int>();
+
+            foreach (var (player, index) in _talkingPlayers.Select((el, i) => (el, i)))
+            {
+                try
+                {
+                    player.UpdateScale(Time.deltaTime);
+                }
+                catch
+                {
+                    toRemove.Add(index);
+                }
+            }
+
+            toRemove.ForEach(_talkingPlayers.RemoveAt);
         }
     }
 }
